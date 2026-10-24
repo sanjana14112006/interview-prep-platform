@@ -49,4 +49,83 @@ An intelligent, full-stack mock interview application that prepares candidates t
                             [ Tri-Pillar Assessment ]
                             • Technical Depth (1-10)
                             • English Fluency (1-10)
-                            • Delivery Confidence (1-10)
+                            • Delivery Confidence (1-10) 
+```
+
+
+## Getting Started
+### Prerequisites
+Node.js (v18+ recommended)
+
+npm
+
+Google Gemini API Key
+
+MongoDB instance (Local or Atlas)
+
+### Installation & Local Setup
+1. Clone the repository
+
+```bash
+git clone https://github.com/sanjana14112006/interview-prep-platform.git
+cd interview-prep-platform
+```
+
+2. Backend Setup
+```bash 
+cd Backend
+npm install
+```
+
+Create a .env file inside the Backend/ directory:
+```bash 
+PORT=5000
+GOOGLE_GENAI_API_KEY=your_gemini_api_key_here
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+```
+
+Start the backend development server:
+```bash 
+npm run dev
+# Server running at http://localhost:5000
+```
+
+3. Frontend Setup
+Open a separate terminal window:
+```bash 
+cd Frontend
+npm install
+npm run dev
+# App running at http://localhost:5173
+```
+
+### Project Structure : 
+```text
+├── Backend/
+│   ├── src/
+│   │   ├── config/          # Database configuration
+│   │   ├── controllers/     # Authentication & interview controllers
+│   │   ├── middlewares/     # JWT verification & request validation
+│   │   ├── models/          # MongoDB schemas (User, InterviewReport)
+│   │   ├── routes/          # Express route declarations
+│   │   └── services/        # Gemini API service & evaluation prompts
+│   ├── package.json
+│   └── server.js
+│
+├── Frontend/
+│   ├── src/
+│   │   ├── features/
+│   │   │   ├── auth/        # Auth state, login & registration views
+│   │   │   └── interview/   # Question practice, roadmap & score modules
+│   │   ├── utils/           # IndexedDB binary persistence logic
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+├── .gitignore
+└── README.md
+```
+
+
