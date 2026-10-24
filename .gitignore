@@ -1,0 +1,21 @@
+# Dependencies
+**/node_modules/
+node_modules/
+
+# Secrets
+**/.env
+.env
+
+# Build outputs
+**/dist/
+dist/
+
+# System files & logs
+*.log
+.DS_Store
+
+# Personal notes & draft files
+notes.txt
+text.txt
+**/notes.txt
+**/text.txt
